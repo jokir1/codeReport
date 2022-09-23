@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;1,300&display=swap');
+
+table {
+    border:solid black 1px;
+    border-radius:10px;
+    border-spacing: 0;
+    border-collapse: separate;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+td,th{
+  padding: 1em;
+}
+
+th {
+  border-top: none;
+  padding-bottom: 0em;
+}
+
+td {
+  border: solid #AFAFAF 1px;
+}
