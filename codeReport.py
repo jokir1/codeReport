@@ -5,7 +5,15 @@ studentList=['Josh','Randi','Loosey']
 trs=""
 for student in studentList:
 
-    trs+=f"<tr><td>{student}</td></tr>\n"
+    trs+=f"""<tr>
+      <td>{student}</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    """
 
 html=f"""
 
@@ -26,64 +34,7 @@ html=f"""
             <th>T</th>
             <th>F</th>
         </tr>
-        <!-- THIS IS IT -->
-        <tr>
-          <td>Student 1</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Student 2</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Student 3</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Student 4</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Student 5</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Student 6</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Student 7</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <!-- THIS NEEDS TO CHANGE -->
+        {trs}
     </table>
   </body>
 </html>
