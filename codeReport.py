@@ -41,6 +41,7 @@ t=Table(data,
                     ('BACKGROUND',(0,0),(-1,0), colors.grey),
                     ('ROUNDEDCORNERS', [2, 2, 2, 2]),
                     ('TEXTCOLOR',(0,0),(-1,0),colors.white),
+                    ('FONTSIZE',(0,1),(-1,-1),11),
                     ])
 
 elements.append(t)

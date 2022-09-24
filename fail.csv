@@ -1,0 +1,22 @@
+,student.grade,student.lastName,student.firstName,courseSection.courseName,courseSection.teacherFullName,grading.progressScore,courseSection.sectionNumber,student.personID,student.studentNumber
+21,8,Abeyta,Jeremiah,8th Grade Science,"Kirtley, Joshua",F,1366,1759737,2220406
+546,8,Brune,David,Early U.S. History,"Abrams, Herbert",F,1466,1313907,2134282
+1088,8,Diaz,Gabriel,Early U.S. History,"Petersen, Jared",F,1456,2244883,2228273
+1453,8,Fransua,Marcello,Early U.S. History,"Petersen, Jared",F,1456,1229467,2116236
+2015,8,Herman,Jacob,Early U.S. History GT,"Abling, Shaunna",F,1406,1169685,2106869
+2016,8,Herman,Jacob,Early U.S. History GT,"Bloom, Alayna",F,1406,1169685,2106869
+2017,8,Herman,Jacob,Early U.S. History GT,"Hauser, Jeffrey",F,1406,1169685,2106869
+2033,8,Hernandez Morales,Uriel,8th Grade Science,"O'Neil, Christian",F,1356,1406074,2145038
+2048,8,Hernandez Perez,Caleb,Science Exploration,"Sandblom, Lee",F,1346,1403931,2144909
+2214,8,Jackson,Makenzi,Creative Writing,"Brown, Amanda",F,1166,1503076,2166268
+2229,8,Jara,Gabriel,English/Language Arts 8,"Botkin, Anne",F,1156,2325208,2247174
+2718,8,Lucas,Autumn,Theatre Arts,"Bryson, Margaret",F,1536,1553577,2178854
+2982,8,Mascarenas,Dominick,Early U.S. History,"Petersen, Jared",F,1456,1487422,2163380
+3010,8,Mayes,Jack,Creative Writing,"Brown, Amanda",F,1166,1321177,2132607
+4042,8,Rivera,Geno,Early U.S. History,"Petersen, Jared",F,1456,1360004,2146005
+4128,8,Rodriguez Castillo,Britannia,8th Grade Science,"Kirtley, Joshua",F,1366,1351630,2137686
+4387,8,Schuler,Cerrigain,Early U.S. History,"Petersen, Jared",F,1456,1420319,2147748
+4812,8,Torrez,Raymond,English/Language Arts 8,"Botkin, Anne",F,1156,1412944,2145964
+4890,8,Tudjunsawat,Panthamit,English/Language Arts 8,"Botkin, Anne",F,1156,2336600,2249580
+5163,8,Wilford,Dazirius,Math 8,"Vaughn, Stephanie",F,1256,2335564,2249495
+5231,8,Woodke,Devon,8th Grade Science,"Kirtley, Joshua",F,1366,2288709,2238990
