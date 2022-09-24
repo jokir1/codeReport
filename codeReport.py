@@ -29,8 +29,11 @@ data=  [['Student', 'M', 'T', 'W', 'T', 'F','Comments']]
 
 for student in students:
     data.append([f"{student}","","","","","",""])
+columnWidths=[2*inch,0.8*inch,0.8*inch,0.8*inch,0.8*inch,0.8*inch,2*inch]
 
-t=Table(data,style=[('GRID',(0,0),(-1,-1),1,colors.grey),
+t=Table(data,
+        colWidths=columnWidths,
+        style=[('GRID',(0,0),(-1,-1),1,colors.grey),
                     ('GRID',(0,0),(-1,0),1,colors.white),
                     ('LINEABOVE',(0,0),(-1,1),1,colors.black),
                     ('BOX',(0,0),(-1,-1),1.5,colors.black),
