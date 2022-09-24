@@ -9,7 +9,7 @@ reportlab.rl_config.warnOnMissingFontGlyphs = 0
 
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-pdfmetrics.registerFont(TTFont('Nunito-Light', 'Nunito-Light.ttf'))
+pdfmetrics.registerFont(TTFont('Nunito-Light', 'fonts/Nunito-Light.ttf'))
 
 #Inputs
 filepath=input("Path to .csv: ")
