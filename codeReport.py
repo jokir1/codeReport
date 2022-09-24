@@ -1,3 +1,4 @@
+import csv
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter, inch
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
@@ -10,58 +11,24 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 pdfmetrics.registerFont(TTFont('Nunito-Light', 'Nunito-Light.ttf'))
 
+#Inputs
+filepath=input("Path to .csv: ")
+studentColumn=input("Enter the exact name of the column header containing students: ")
+outputFilepath=input("Path to save .pdf: ")
 
-f=open('test.html','w')
+f=open(filepath, newline='')
+reader=csv.DictReader(f)
 
-studentList=['Josh','Randi','Loosey']
+students=[]
+for row in reader:
+    students.append(row[studentColumn])
 
-trs=""
-for student in studentList:
-
-    trs+=f"""<tr>
-      <td>{student}</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    """
-
-html=f"""
-
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <table>
-        <tr>
-            <th>Student</th>
-            <th>M</th>
-            <th>T</th>
-            <th>W</th>
-            <th>T</th>
-            <th>F</th>
-        </tr>
-        {trs}
-    </table>
-  </body>
-</html>
-"""
-
-f.write(html)
-f.close()
-
-doc = SimpleDocTemplate("test.pdf", pagesize=letter)
+doc = SimpleDocTemplate(outputFilepath, pagesize=letter)
 elements=[]
-data=  [['Student', 'M', 'T', 'W', 'T', 'F']]
+data=  [['Student', 'M', 'T', 'W', 'T', 'F','Comments']]
 
-for student in studentList:
-    data.append([f"{student}","","","","",""])
+for student in students:
+    data.append([f"{student}","","","","","",""])
 
 t=Table(data,style=[('GRID',(0,0),(-1,-1),1,colors.grey),
                     ('GRID',(0,0),(-1,0),1,colors.white),
