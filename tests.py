@@ -50,5 +50,7 @@ class TestStandardTable(unittest.TestCase):
                         ['Laurie Pree','','','','','','']]
         self.assertEqual(givenInput1.data(), expectedOutput1, f"Should be {expectedOutput1}")
 
+#This is just so you can execute in the terminal with the command:
+#    python3 -m unittest tests
 if __name__=="__main__":
     unittest.main()
