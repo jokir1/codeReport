@@ -33,6 +33,16 @@ class StandardTable:
             data.append([f"{student}","","","","","",""])
         return data
 
+    def createTitle(self):
+        styles = ParagraphStyle('styles',
+                                alignment=1,
+                                fontName='Nunito-Light',
+                                fontSize=14,
+                                leading=17)
+        title = Paragraph(text='Accountability Codes',
+                            style=styles)
+        return title
+
     def createTable(self):
         table=Table(self.data(),
                 colWidths=self.columnWidths(),
@@ -58,16 +68,9 @@ class StandardTable:
                                 topMargin=0.25*inch,
                                 bottomMargin=0.25*inch,)
         elements=[]
-        styles = ParagraphStyle('styles',
-                                alignment=1,
-                                fontName='Nunito-Light',
-                                fontSize=14,
-                                leading=17)
-        title = Paragraph(text='Accountability Codes',
-                            style=styles)
+        title = self.createTitle()
         vspace = Spacer(width=8.5*inch,height=0.125*inch)
-
-        t=self.createTable()
+        t = self.createTable()
         elements.append(title)
         elements.append(vspace)
         elements.append(t)
