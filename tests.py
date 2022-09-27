@@ -57,13 +57,16 @@ class TestStandardTable(unittest.TestCase):
 class TestStudentList(unittest.TestCase):
     givenFilePath='csvtest.csv'
     givenColumnName='fullName'
-    givenInput=StudentList(self.givenFilePath,self.givenColumnName)
-    expectedOutput=['Vernon Magar', 'Laurence Adragna', 'Jami Wright', 'Matthew Lewis', 'Kim Torrez',
-            'Betty Kleinman', 'Frank Gomez', 'Martin Salvato', 'Andy Goodwin', 'Shannon Smyth',
-            'Robert Crouch', 'George Froelich', 'James Brown', 'Michael Vandyke', 'Dorothy Oyler',
-            'Karl Cavanaugh', 'Joan Walls', 'Jerry Willardson', 'Dennis Olson', 'Susan Rodriguez',
-            'Catherine Robinson', 'Hillary Baker', 'Rosa Hoang', 'Gerald Lary', 'Laurie Pree']
-    self.assertEqual(givenInput.student_list(), expectedOutput, f"Should be {expectedOutput}")
+
+    #This will test the method that returns a list of students.
+    def test_student_list_method(self):
+        givenInput=StudentList(self.givenFilePath,self.givenColumnName)
+        expectedOutput=['Vernon Magar', 'Laurence Adragna', 'Jami Wright', 'Matthew Lewis', 'Kim Torrez',
+                'Betty Kleinman', 'Frank Gomez', 'Martin Salvato', 'Andy Goodwin', 'Shannon Smyth',
+                'Robert Crouch', 'George Froelich', 'James Brown', 'Michael Vandyke', 'Dorothy Oyler',
+                'Karl Cavanaugh', 'Joan Walls', 'Jerry Willardson', 'Dennis Olson', 'Susan Rodriguez',
+                'Catherine Robinson', 'Hillary Baker', 'Rosa Hoang', 'Gerald Lary', 'Laurie Pree']
+        self.assertEqual(givenInput.student_list(), expectedOutput, f"Should be {expectedOutput}")
 
 if __name__=="__main__":
     unittest.main()

@@ -1,4 +1,6 @@
 import csv
 
 class StudentList:
-    pass
+    def __init__(self,filepath,col_name):
+        self.filepath=filepath
+        self.col_name=col_name
