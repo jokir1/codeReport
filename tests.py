@@ -1,7 +1,9 @@
 import unittest
+import csv
 
 from reportlab.lib.pagesizes import inch
 from reports.tables import StandardTable
+from student_list.student_list import StudentList
 
 class TestStandardTable(unittest.TestCase):
     #This is for creating test classes
@@ -52,5 +54,16 @@ class TestStandardTable(unittest.TestCase):
 
 #This is just so you can execute in the terminal with the command:
 #    python3 -m unittest tests
+class TestStudentList(unittest.TestCase):
+    givenFilePath='csvtest.csv'
+    givenColumnName='fullName'
+    givenInput=StudentList(self.givenFilePath,self.givenColumnName)
+    expectedOutput=['Vernon Magar', 'Laurence Adragna', 'Jami Wright', 'Matthew Lewis', 'Kim Torrez',
+            'Betty Kleinman', 'Frank Gomez', 'Martin Salvato', 'Andy Goodwin', 'Shannon Smyth',
+            'Robert Crouch', 'George Froelich', 'James Brown', 'Michael Vandyke', 'Dorothy Oyler',
+            'Karl Cavanaugh', 'Joan Walls', 'Jerry Willardson', 'Dennis Olson', 'Susan Rodriguez',
+            'Catherine Robinson', 'Hillary Baker', 'Rosa Hoang', 'Gerald Lary', 'Laurie Pree']
+    self.assertEqual(givenInput.student_list(), expectedOutput, f"Should be {expectedOutput}")
+
 if __name__=="__main__":
     unittest.main()
