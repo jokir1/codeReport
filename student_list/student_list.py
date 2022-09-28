@@ -12,3 +12,6 @@ class StudentList:
         for row in reader:
             student_list.append(row[self.col_name])
         return student_list
+
+    def split_by_course(self):
+        pass

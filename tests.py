@@ -56,6 +56,7 @@ class TestStandardTable(unittest.TestCase):
 #    python3 -m unittest tests
 class TestStudentList(unittest.TestCase):
     givenFilePath='csvtest.csv'
+    givenFilePath2='csvtest2.csv'
     givenColumnName='fullName'
 
     #This will test the method that returns a list of students.
@@ -67,6 +68,16 @@ class TestStudentList(unittest.TestCase):
                 'Karl Cavanaugh', 'Joan Walls', 'Jerry Willardson', 'Dennis Olson', 'Susan Rodriguez',
                 'Catherine Robinson', 'Hillary Baker', 'Rosa Hoang', 'Gerald Lary', 'Laurie Pree']
         self.assertEqual(givenInput.student_list(), expectedOutput, f"Should be {expectedOutput}")
+
+    def test_split_by_course_method(self):
+        givenInput=StudentList(self.givenFilePath2,self.givenColumnName)
+        sampleList=['Vernon Magar', 'Laurence Adragna', 'Jami Wright', 'Matthew Lewis', 'Kim Torrez',
+                'Betty Kleinman', 'Frank Gomez', 'Martin Salvato', 'Andy Goodwin', 'Shannon Smyth',
+                'Robert Crouch', 'George Froelich', 'James Brown', 'Michael Vandyke', 'Dorothy Oyler',
+                'Karl Cavanaugh', 'Joan Walls', 'Jerry Willardson', 'Dennis Olson', 'Susan Rodriguez',
+                'Catherine Robinson', 'Hillary Baker', 'Rosa Hoang', 'Gerald Lary', 'Laurie Pree']
+        expectedOutput=[sampleList,sampleList,sampleList]
+        self.assertEqual(givenInput.split_by_course(), expectedOutput, f"Should be {expectedOutput}")
 
 if __name__=="__main__":
     unittest.main()
