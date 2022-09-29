@@ -46,4 +46,8 @@ class StudentList:
                 course=[]
             else:
                 course.append(row[index])
-        return courses
+        courses_cleaned=[]
+        for course in courses:
+            if course != []:
+                courses_cleaned.append(course)
+        return courses_cleaned
