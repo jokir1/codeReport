@@ -32,5 +32,18 @@ class StudentList:
             student_list.append(row[self.col_name])
         return student_list
 
-    def split_by_course(self,delimiter=None):
-        pass
+    def split_by_course(self):
+        f=open(self.filepath, newline='')
+        reader=csv.reader(f)
+        index=0
+        courses=[]
+        course=[]
+        for row in reader:
+            if self.col_name in row:
+                index=row.index(self.col_name)
+            elif all(s=='' or s.isspace() for s in row):
+                courses.append(course)
+                course=[]
+            else:
+                course.append(row[index])
+        return courses
