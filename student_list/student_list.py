@@ -27,9 +27,7 @@ class StudentList:
     def student_list(self):
         f=open(self.filepath, newline='')
         reader=csv.DictReader(f)
-        student_list=[]
-        for row in reader:
-            student_list.append(row[self.col_name])
+        student_list=[row[self.col_name] for row in reader]
         return student_list
 
     def split_by_course(self):
@@ -46,8 +44,5 @@ class StudentList:
                 course=[]
             else:
                 course.append(row[index])
-        courses_cleaned=[]
-        for course in courses:
-            if course != []:
-                courses_cleaned.append(course)
+        course_cleaned=[course for course in courses if course != []]
         return courses_cleaned
