@@ -24,6 +24,12 @@ class StudentList:
         self.filepath=filepath
         self.col_name=col_name
 
+    def __str__(self):
+        return f"filepath:{self.filepath}, col_name:{self.col_name}"
+
+    def __repr__(self):
+        return f"<{self.__class__.__name__}: \'{self.filepath}\', \'{self.col_name}\'>"
+
     def student_list(self):
         f=open(self.filepath, newline='')
         reader=csv.DictReader(f)
